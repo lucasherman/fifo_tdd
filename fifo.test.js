@@ -34,4 +34,10 @@ describe("fifo tests", () => {
     expect(fifo.getSize()).toBe(3);
   });
 
+  it("popping empty stack throws Range Error", () => {
+    fifo = new Fifo();
+    expect(fifo.isEmpty()).toBeTruthy();
+    expect(() => fifo.pop()).toThrow(RangeError);
+  });
+
 });
