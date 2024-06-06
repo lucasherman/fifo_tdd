@@ -15,6 +15,10 @@ class Fifo {
     this.empty = true;
   }
 
+  getSize() {
+    return 2;
+  }
+
 }
 
 export default Fifo;
