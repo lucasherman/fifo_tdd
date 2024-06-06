@@ -1,3 +1,5 @@
+import Fifo from './fifo.js'
+
 describe("fifo tests", () => {
 
   it("nothing", () => {
