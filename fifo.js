@@ -1,22 +1,22 @@
 class Fifo {
   constructor() {
-    this.empty = true;
+    this.size = 0;
   }
 
   isEmpty() {
-    return this.empty;
+    return this.size === 0;
   }
 
   push() {
-    this.empty = false;
+    this.size += 1;
   }
 
   pop() {
-    this.empty = true;
+    this.size -= 1;
   }
 
   getSize() {
-    return 2;
+    return this.size;
   }
 
 }
