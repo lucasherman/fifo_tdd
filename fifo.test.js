@@ -54,4 +54,13 @@ describe("fifo tests", () => {
     elements.forEach(element => expect(resultElements.includes(element)).toBeTruthy());
   });
 
+  it("pushes three elements and pops the same elements in the correct order", () => {
+    fifo = new Fifo();
+    const elements = ['element 1', 'element 2', 'element 3'];
+    elements.forEach(element => fifo.push(element));
+    expect(fifo.pop()).toEqual('element 1');
+    expect(fifo.pop()).toEqual('element 2');
+    expect(fifo.pop()).toEqual('element 3');
+  });
+
 });
