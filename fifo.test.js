@@ -20,4 +20,9 @@ describe("fifo tests", () => {
     expect(fifo.isEmpty()).toBeFalsy()
   });
 
+  it("after pop is empty", () => {
+    fifo.pop()
+    expect(fifo.isEmpty()).toBeTruthy()
+  })
+
 });
