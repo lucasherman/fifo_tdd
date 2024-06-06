@@ -15,7 +15,7 @@ class Fifo {
     if (this.stack.length <= 0) {
       throw RangeError("Cannot pop an empty stack")
     }
-    return this.stack.pop();
+    return this.stack.shift();
   }
 
   getSize() {
