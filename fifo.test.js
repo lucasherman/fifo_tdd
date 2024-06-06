@@ -25,11 +25,13 @@ describe("fifo tests", () => {
     expect(fifo.isEmpty()).toBeTruthy()
   });
 
-  it("after two pushes size is two", () => {
+  it("after two pushes size is two, after three pushes size is 3", () => {
     fifo = new Fifo();
     fifo.push();
     fifo.push();
     expect(fifo.getSize()).toBe(2);
+    fifo.push();
+    expect(fifo.getSize()).toBe(3);
   });
 
 });
