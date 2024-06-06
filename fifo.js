@@ -1,13 +1,15 @@
 class Fifo {
   constructor() {
     this.size = 0;
+    this.element = null;
   }
 
   isEmpty() {
     return this.size === 0;
   }
 
-  push() {
+  push(element) {
+    this.element = element;
     this.size += 1;
   }
 
@@ -16,6 +18,7 @@ class Fifo {
       throw RangeError("Cannot pop an empty stack")
     }
     this.size -= 1;
+    return this.element;
   }
 
   getSize() {

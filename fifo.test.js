@@ -43,7 +43,7 @@ describe("fifo tests", () => {
   it("pushes the element and pop the same element", () => {
     fifo = new Fifo();
     fifo.push('element 1');
-    expect(() => fifo.pop()).toEqual('element 1');
+    expect(fifo.pop()).toEqual('element 1');
   })
 
 });
