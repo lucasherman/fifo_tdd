@@ -15,4 +15,9 @@ describe("fifo tests", () => {
     expect(fifo.isEmpty()).toBeTruthy()
   });
 
+  it("after push is not empty", () => {
+    fifo.push('element 1');
+    expect(fifo.isEmpty()).toBeFalsy()
+  });
+
 });
