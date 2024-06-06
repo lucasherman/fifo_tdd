@@ -23,6 +23,13 @@ describe("fifo tests", () => {
   it("after pop is empty", () => {
     fifo.pop()
     expect(fifo.isEmpty()).toBeTruthy()
-  })
+  });
+
+  it("after two pushes size is two", () => {
+    fifo = new Fifo();
+    fifo.push();
+    fifo.push();
+    expect(fifo.getSize()).toBe(2);
+  });
 
 });
