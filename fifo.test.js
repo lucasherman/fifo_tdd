@@ -40,4 +40,10 @@ describe("fifo tests", () => {
     expect(() => fifo.pop()).toThrow(RangeError);
   });
 
+  it("pushes the element and pop the same element", () => {
+    fifo = new Fifo();
+    fifo.push('element 1');
+    expect(() => fifo.pop()).toEqual('element 1');
+  })
+
 });
