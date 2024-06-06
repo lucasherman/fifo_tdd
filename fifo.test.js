@@ -4,4 +4,8 @@ describe("fifo tests", () => {
 
   });
 
+  it("created fifo stack", () => {
+    const fifo = new Fifo();
+  });
+
 });
