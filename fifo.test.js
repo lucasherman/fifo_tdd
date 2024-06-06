@@ -44,6 +44,14 @@ describe("fifo tests", () => {
     fifo = new Fifo();
     fifo.push('element 1');
     expect(fifo.pop()).toEqual('element 1');
-  })
+  });
+
+  it("pushes three elements and pops the same elements", () => {
+    fifo = new Fifo();
+    const elements = ['el1', 'el2', 'el3'];
+    elements.forEach(element => fifo.push(element));
+    const resultElements = elements.map(element => fifo.pop());
+    elements.forEach(element => expect(resultElements.includes(element)).toBeTruthy());
+  });
 
 });
