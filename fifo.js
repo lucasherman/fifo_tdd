@@ -1,7 +1,14 @@
 class Fifo {
+  constructor() {
+    this.empty = true;
+  }
 
   isEmpty() {
-    return true;
+    return this.empty;
+  }
+
+  push() {
+    this.empty = false;
   }
 
 }
