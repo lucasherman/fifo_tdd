@@ -11,6 +11,10 @@ class Fifo {
     this.empty = false;
   }
 
+  pop() {
+    this.empty = true;
+  }
+
 }
 
 export default Fifo;
